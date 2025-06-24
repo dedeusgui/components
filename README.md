@@ -1,8 +1,4 @@
-# Exemplo de Accordion (Acordeão)
 
-Este repositório contém um exemplo simples de um componente **Accordion**, com HTML, CSS e JavaScript puros. O objetivo é mostrar como criar um efeito de abrir/fechar seções de conteúdo ao clicar em títulos.
-
----
 
 ## 📌 O que é um Accordion?
 
