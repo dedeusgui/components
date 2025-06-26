@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Barra de Progresso</title>
+  <style>
+    /* Estilo da barra de progresso */
+    progress {
+      width: 100%;      /* Ocupa toda a largura disponível */
+      height: 20px;     /* Altura fixa da barra */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra de progresso HTML padrão -->
+  <progress id="bar" value="60" max="100"></progress>
+
+  <!-- Texto que exibe o valor atual em porcentagem -->
+  <p>Progresso: <span id="pct">60%</span></p>
+
+  <script>
+    // Captura os elementos da barra e do texto
+    const bar = document.getElementById('bar'),
+          pct = document.getElementById('pct');
+
+    // Atualiza o texto da porcentagem com base no valor da barra
+    pct.textContent = bar.value + '%';
+  </script>
+
+</body>
+</html>
