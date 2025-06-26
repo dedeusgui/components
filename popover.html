@@ -1,0 +1,46 @@
+<!-- Container do popover: envolve o botão e o conteúdo -->
+<div class="popover" onclick="togglePopover()">
+
+  <!-- Botão que ativa/desativa o popover ao ser clicado -->
+  <button class="popover-btn">Info</button>
+
+  <!-- Conteúdo do popover (caixa de informações flutuante) -->
+  <div id="popover" class="popover-content">
+    <p>Conteúdo do popover.</p>
+  </div>
+</div>
+
+<script>
+/* Função que alterna a visibilidade do popover */
+function togglePopover() {
+  // Seleciona o elemento com id "popover" e alterna a classe "show"
+  document.getElementById('popover').classList.toggle('show');
+}
+</script>
+
+<style>
+/* Container principal do popover */
+.popover {
+  position: relative;           /* Necessário para posicionar o conteúdo relativo ao botão */
+  display: inline-block;        /* Permite que fique na mesma linha de outros elementos */
+}
+
+/* Estilo do conteúdo do popover (oculto por padrão) */
+.popover-content {
+  display: none;                /* Esconde o conteúdo inicialmente */
+  position: absolute;           /* Posiciona em relação ao .popover */
+  top: 120%;                    /* Posiciona abaixo do botão */
+  left: 50%;                    /* Centraliza horizontalmente */
+  transform: translateX(-50%);  /* Corrige o alinhamento central */
+  background: #fff;             /* Fundo branco */
+  padding: 10px;                /* Espaçamento interno */
+  border: 1px solid #ccc;       /* Borda cinza clara */
+  border-radius: 4px;           /* Bordas arredondadas */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Sombra para dar destaque */
+}
+
+/* Classe adicionada para mostrar o conteúdo do popover */
+.popover-content.show {
+  display: block;               /* Torna o popover visível */
+}
+</style>
