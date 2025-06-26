@@ -1,0 +1,35 @@
+<style>
+  /* Define o estilo base para todos os tipos de alerta */
+  .alert {
+    padding: 12px;         /* Adiciona um espaçamento interno de 12 pixels */
+    border-radius: 4px;    /* Arredonda as bordas do alerta */
+    margin-bottom: 10px;   /* Adiciona uma margem inferior para separar os alertas */
+  }
+
+  /* Modificador para o alerta de sucesso */
+  .alert-success {
+    background: #d4edda; /* Define um fundo verde claro */
+    color: #155724;      /* Define a cor do texto para verde escuro */
+    border: 1px solid #c3e6cb; /* Adiciona uma borda verde */
+  }
+
+  /* Modificador para o alerta de aviso */
+  .alert-warning {
+    background: #fff3cd; /* Define um fundo amarelo claro */
+    color: #856404;      /* Define a cor do texto para amarelo/marrom escuro */
+    border: 1px solid #ffeeba; /* Adiciona uma borda amarela */
+  }
+
+  /* Modificador para o alerta de perigo/erro */
+  .alert-danger {
+    background: #f8d7da; /* Define um fundo vermelho claro */
+    color: #721c24;      /* Define a cor do texto para vermelho escuro */
+    border: 1px solid #f5c6cb; /* Adiciona uma borda vermelha */
+  }
+</style>
+
+<div class="alert alert-success">Sucesso! Operação concluída.</div>
+
+<div class="alert alert-warning">Atenção! Verifique os dados.</div>
+
+<div class="alert alert-danger">Erro! Algo falhou.</div>
