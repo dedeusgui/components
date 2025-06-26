@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Tooltip</title>
+  <style>
+    /* Botão que ativa o tooltip */
+    .tooltip {
+      position: relative;     /* Necessário para posicionar a dica em relação ao botão */
+      cursor: help;           /* Cursor de ajuda ao passar o mouse */
+      border: none;           /* Remove borda padrão */
+      background: none;       /* Remove fundo */
+    }
+
+    /* Conteúdo da dica (tooltip) */
+    .tip {
+      visibility: hidden;         /* Esconde a dica por padrão */
+      width: 120px;               /* Largura fixa da dica */
+      text-align: center;         /* Centraliza o texto */
+      background: #000;           /* Fundo preto */
+      color: #fff;                /* Texto branco */
+      padding: 6px;               /* Espaçamento interno */
+      border-radius: 4px;         /* Borda arredondada */
+      position: absolute;         /* Posicionamento absoluto em relação ao botão */
+      bottom: 125%;               /* Fica acima do botão */
+      left: 50%;                  /* Centralizado horizontalmente */
+      transform: translateX(-50%);/* Ajuste fino para centralizar */
+      opacity: 0;                 /* Inicialmente invisível */
+      transition: opacity .3s;    /* Transição suave ao aparecer/desaparecer */
+    }
+
+    /* Quando o mouse passa por cima, mostra a dica */
+    .tooltip:hover .tip {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Botão com a dica embutida -->
+  <button class="tooltip">
+    Passe o mouse
+    <span class="tip">Dica extra aqui</span>
+  </button>
+
+</body>
+</html>
