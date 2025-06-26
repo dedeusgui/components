@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Controle Deslizante</title>
+  <style>
+    /* Estilo para o controle deslizante (input type range) */
+    input[type="range"] {
+      width: 100%;        /* Ocupa toda a largura disponível */
+      cursor: pointer;    /* Mostra o cursor de mão ao passar o mouse */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Controle deslizante com valor inicial 50 -->
+  <input type="range" id="slider" min="0" max="100" value="50">
+
+  <!-- Texto exibindo o valor atual do controle -->
+  <p>Valor: <span id="val">50</span></p>
+
+  <script>
+    // Seleciona o controle deslizante e o elemento de texto
+    const s = document.getElementById('slider'),
+          v = document.getElementById('val');
+
+    // Atualiza o texto sempre que o usuário move o controle
+    s.addEventListener('input', () => {
+      v.textContent = s.value;
+    });
+  </script>
+
+</body>
+</html>
