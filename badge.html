@@ -1,0 +1,37 @@
+<!-- Rótulo (badge) com estilo azul indicando algo novo -->
+<span class="badge badge-primary">Novo</span>
+
+<!-- Rótulo verde indicando sucesso ou confirmação -->
+<span class="badge badge-success">OK</span>
+
+<!-- Rótulo vermelho indicando alerta ou erro -->
+<span class="badge badge-danger">!</span>
+
+<style>
+/* Estilo base para todos os badges (rótulos) */
+.badge {
+  display: inline-block;    /* Fica na mesma linha que o texto, mas aceita tamanho */
+  padding: 4px 8px;         /* Espaçamento interno: cima/baixo e lados */
+  font-size: .8rem;         /* Tamanho da fonte menor que o padrão */
+  font-weight: bold;        /* Texto em negrito */
+  border-radius: 8px;       /* Bordas arredondadas */
+}
+
+/* Cor de fundo azul e texto branco para badge "primário" */
+.badge-primary {
+  background: #007bff;      /* Azul padrão Bootstrap */
+  color: #fff;              /* Texto branco */
+}
+
+/* Cor de fundo verde e texto branco para badge de "sucesso" */
+.badge-success {
+  background: #28a745;      /* Verde Bootstrap */
+  color: #fff;
+}
+
+/* Cor de fundo vermelha e texto branco para badge de "erro/alerta" */
+.badge-danger {
+  background: #dc3545;      /* Vermelho Bootstrap */
+  color: #fff;
+}
+</style>
