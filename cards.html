@@ -1,0 +1,57 @@
+<style>
+  /* Estilo do container principal do card */
+  .card {
+    border: 1px solid #ddd;                 /* Adiciona uma borda cinza claro */
+    border-radius: 6px;                     /* Arredonda as bordas do card */
+    overflow: hidden;                       /* Esconde qualquer conteúdo que saia dos limites do card (importante para a imagem) */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);  /* Adiciona uma sombra sutil para dar profundidade */
+    width: 250px;                           /* Define uma largura fixa para o card */
+  }
+
+  /* Estilo da imagem do card */
+  .card-img {
+    width: 100%;      /* Faz a imagem ocupar 100% da largura do card */
+    display: block;   /* Remove espaçamentos extras que a tag <img> pode ter */
+  }
+
+  /* Estilo da área de conteúdo do card (texto e botão) */
+  .card-body {
+    padding: 12px; /* Adiciona um espaçamento interno nesta área */
+  }
+
+  /* Estilo do título do card */
+  .card-title {
+    margin: 0 0 8px;   /* Remove margens superior/laterais e adiciona 8px na inferior */
+    font-size: 1.2rem; /* Aumenta o tamanho da fonte do título */
+  }
+
+  /* Estilo do parágrafo de texto do card */
+  .card-text {
+    margin: 0 0 12px; /* Remove margens superior/laterais e adiciona 12px na inferior */
+    color: #555;      /* Define uma cor de texto cinza escuro */
+  }
+
+  /* Estilo base do botão */
+  .btn {
+    display: inline-block;  /* Permite definir padding, mas se comporta como um item em linha */
+    padding: 8px 12px;      /* Define o espaçamento interno do botão */
+    background: #007bff;    /* Define a cor de fundo do botão como azul */
+    color: #fff;            /* Define a cor do texto do botão como branco */
+    text-decoration: none;  /* Remove o sublinhado padrão do link */
+    border-radius: 4px;     /* Arredonda as bordas do botão */
+  }
+
+  /* Efeito 'hover' para o botão (quando o mouse está sobre ele) */
+  .btn:hover {
+    background: #0056b3; /* Escurece o fundo do botão para dar feedback visual */
+  }
+</style>
+
+<div class="card">
+  <img src="https://via.placeholder.com/250x150" alt="Imagem descritiva do card" class="card-img">
+  <div class="card-body">
+    <h3 class="card-title">Título do Card</h3>
+    <p class="card-text">Descrição breve sobre o conteúdo ou produto apresentado no card.</p>
+    <a href="#" class="btn">Saiba mais</a>
+  </div>
+</div>
