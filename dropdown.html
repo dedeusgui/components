@@ -1,0 +1,60 @@
+<!-- Container principal do menu dropdown -->
+<div class="dropdown">
+  
+  <!-- Botão que ativa o dropdown ao passar o mouse -->
+  <button class="dropbtn">Menu</button>
+  
+  <!-- Conteúdo do dropdown: as opções que aparecem ao interagir -->
+  <div class="dropdown-content">
+    <a href="#">Opção 1</a>  <!-- Link 1 -->
+    <a href="#">Opção 2</a>  <!-- Link 2 -->
+    <a href="#">Opção 3</a>  <!-- Link 3 -->
+  </div>
+</div>
+
+<style>
+/* Container do dropdown: precisa ser relativo para posicionar corretamente o menu */
+.dropdown {
+  position: relative;         /* Importante para posicionar o conteúdo dropdown */
+  display: inline-block;      /* Permite que fique ao lado de outros elementos */
+}
+
+/* Estilo do botão principal do menu */
+.dropbtn {
+  padding: 8px 12px;          /* Espaçamento interno */
+  background: #17a2b8;        /* Cor azul clara (tipo Bootstrap info) */
+  color: #fff;                /* Texto branco */
+  border: none;               /* Remove a borda padrão */
+  border-radius: 4px;         /* Bordas arredondadas */
+  cursor: pointer;            /* Cursor do tipo mão ao passar o mouse */
+}
+
+/* Conteúdo que aparece ao ativar o dropdown */
+.dropdown-content {
+  display: none;              /* Escondido por padrão */
+  position: absolute;         /* Posicionado em relação ao dropdown */
+  background: #fff;           /* Fundo branco */
+  border: 1px solid #ddd;     /* Borda cinza clara */
+  border-radius: 4px;         /* Bordas arredondadas */
+  margin-top: 4px;            /* Espaço entre o botão e o conteúdo */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Sombra leve para destacar */
+}
+
+/* Estilo dos links internos do dropdown */
+.dropdown-content a {
+  display: block;             /* Cada link ocupa toda a largura */
+  padding: 8px 12px;          /* Espaçamento interno */
+  color: #333;                /* Cor de texto cinza escuro */
+  text-decoration: none;      /* Remove sublinhado */
+}
+
+/* Efeito ao passar o mouse sobre uma opção do menu */
+.dropdown-content a:hover {
+  background: #f1f1f1;        /* Fundo cinza claro ao passar o mouse */
+}
+
+/* Mostra o conteúdo do dropdown ao passar o mouse no container */
+.dropdown:hover .dropdown-content {
+  display: block;             /* Exibe o menu ao passar o mouse */
+}
+</style>
