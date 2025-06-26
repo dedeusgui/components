@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Accordion</title>
+  <style>
+    /* Cabeçalho da seção (título clicável) */
+    .acc-header {
+      padding: 12px;             /* Espaço interno */
+      background: #f1f1f1;       /* Cor de fundo padrão */
+      cursor: pointer;           /* Muda o cursor para indicar que é clicável */
+      border: 1px solid #ddd;    /* Borda leve ao redor */
+    }
+
+    /* Estilo aplicado quando o cabeçalho está aberto */
+    .acc-header.open {
+      background: #e2e2e2;       /* Cor diferente para destacar o estado aberto */
+    }
+
+    /* Corpo da seção, inicialmente oculto */
+    .acc-body {
+      display: none;             /* Oculta o conteúdo inicialmente */
+      padding: 10px;             /* Espaçamento interno */
+      border: 1px solid #ddd;    /* Borda ao redor */
+      border-top: none;          /* Remove a borda superior para unir ao cabeçalho */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Item 1 do accordion -->
+  <div class="acc-item">
+    <div class="acc-header" onclick="toggle(this)">Título 1</div>
+    <div class="acc-body">Detalhes da seção 1.</div>
+  </div>
+
+  <!-- Item 2 do accordion -->
+  <div class="acc-item">
+    <div class="acc-header" onclick="toggle(this)">Título 2</div>
+    <div class="acc-body">Detalhes da seção 2.</div>
+  </div>
+
+  <script>
+    // Função para expandir ou recolher a seção clicada
+    function toggle(h) {
+      h.classList.toggle('open'); // Alterna a classe 'open' no cabeçalho
+      const b = h.nextElementSibling; // Seleciona o corpo da seção correspondente
+      // Alterna entre mostrar e esconder o conteúdo
+      b.style.display = (b.style.display === 'block') ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>
