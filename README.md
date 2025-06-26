@@ -1,4 +1,4 @@
-
+# Componentes
 📌 O que são Componentes HTML/CSS?
 Componentes HTML/CSS são blocos reutilizáveis de código que representam partes da interface de um site, como botões, cards, menus, formulários, entre outros.
 
