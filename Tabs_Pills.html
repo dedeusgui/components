@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Abas (Tabs)</title>
+  <style>
+    /* Contêiner das abas */
+    .tabs {
+      display: flex;                  /* Alinha os botões lado a lado */
+      border-bottom: 1px solid #ddd; /* Linha separadora abaixo das abas */
+    }
+
+    /* Estilo de cada botão de aba */
+    .tab {
+      padding: 8px 12px;             /* Espaçamento interno */
+      border: none;                  /* Remove borda padrão */
+      background: none;              /* Fundo transparente */
+      cursor: pointer;              /* Muda o cursor ao passar o mouse */
+    }
+
+    /* Aba ativa (selecionada) */
+    .tab.active {
+      border-bottom: 2px solid #007bff; /* Linha azul embaixo da aba ativa */
+      color: #007bff;                   /* Texto azul para aba ativa */
+    }
+
+    /* Área onde o conteúdo das abas será exibido */
+    .panels {
+      padding: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Botões das abas -->
+  <div class="tabs">
+    <button class="tab active" onclick="show(0)">Tab 1</button>
+    <button class="tab" onclick="show(1)">Tab 2</button>
+  </div>
+
+  <!-- Painéis de conteúdo -->
+  <div class="panels">
+    <div class="panel">Conteúdo 1</div>
+    <div class="panel" style="display:none;">Conteúdo 2</div>
+  </div>
+
+  <script>
+    // Função que exibe o painel correspondente à aba clicada
+    function show(i) {
+      // Alterna a exibição dos conteúdos
+      document.querySelectorAll('.panel').forEach((p, j) => {
+        p.style.display = (j === i) ? 'block' : 'none';
+      });
+
+      // Atualiza a aba ativa
+      document.querySelectorAll('.tab').forEach((t, j) => {
+        t.classList.toggle('active', j === i);
+      });
+    }
+  </script>
+
+</body>
+</html>
