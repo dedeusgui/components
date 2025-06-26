@@ -1,0 +1,47 @@
+<!-- Elemento de navegação com rótulo acessível -->
+<nav aria-label="Navegação de página">
+  
+  <!-- Lista de itens da paginação -->
+  <ul class="pagination">
+
+    <!-- Link para página anterior -->
+    <li><a href="#prev">&laquo; Anterior</a></li>
+
+    <!-- Links para páginas específicas -->
+    <li><a href="#1">1</a></li>
+    <li><a href="#2">2</a></li>
+    <li><a href="#3">3</a></li>
+
+    <!-- Link para próxima página -->
+    <li><a href="#next">Próximo &raquo;</a></li>
+  </ul>
+</nav>
+
+<style>
+/* Remove os marcadores padrão da lista e define layout em linha */
+.pagination {
+  list-style: none;     /* Remove bolinhas da lista */
+  display: flex;        /* Exibe os itens lado a lado (linha) */
+  padding: 0;           /* Remove o espaçamento interno da lista */
+}
+
+/* Espaçamento entre os itens da lista */
+.pagination li {
+  margin: 0 4px;        /* Espaço horizontal entre os botões */
+}
+
+/* Estilização dos links de navegação */
+.pagination a {
+  display: block;               /* Permite aplicar padding e borda corretamente */
+  padding: 6px 10px;            /* Espaçamento interno */
+  border: 1px solid #ddd;       /* Borda cinza clara */
+  border-radius: 4px;           /* Cantos arredondados */
+  text-decoration: none;        /* Remove sublinhado */
+  color: #007bff;               /* Azul padrão Bootstrap */
+}
+
+/* Efeito visual ao passar o mouse sobre os links */
+.pagination a:hover {
+  background: #e9ecef;          /* Fundo cinza claro ao passar o mouse */
+}
+</style>
