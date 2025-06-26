@@ -1,30 +1,40 @@
+<!-- Botão que chama a função toggleCollapse() ao ser clicado -->
 <button class="collapse-btn" onclick="toggleCollapse()">Mostrar/Ocultar</button>
+
+<!-- Conteúdo que será mostrado ou ocultado ao clicar no botão -->
 <div id="collapse" class="collapse-content">
   <p>Conteúdo expansível.</p>
 </div>
 
 <script>
+// Função que alterna a visibilidade do elemento com ID 'collapse'
 function toggleCollapse() {
+  // Seleciona o elemento com ID 'collapse'
   const el = document.getElementById('collapse');
+  
+  // Se o elemento estiver visível (display: block), oculta; senão, mostra
   el.style.display = el.style.display === 'block' ? 'none' : 'block';
 }
 </script>
 
 <style>
+/* Estilização do botão que expande/colapsa o conteúdo */
 .collapse-btn {
-  padding: 8px 12px;
-  background: #28a745;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  padding: 8px 12px;         /* Espaçamento interno do botão */
+  background: #28a745;       /* Cor de fundo verde */
+  color: #fff;               /* Cor do texto branca */
+  border: none;              /* Remove borda padrão */
+  border-radius: 4px;        /* Bordas arredondadas */
+  cursor: pointer;           /* Cursor tipo mãozinha ao passar por cima */
 }
+
+/* Estilo da caixa de conteúdo que será expandida ou colapsada */
 .collapse-content {
-  display: none;
-  padding: 10px;
-  margin-top: 8px;
-  background: #f8f9fa;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  display: none;             /* Inicialmente o conteúdo está oculto */
+  padding: 10px;             /* Espaçamento interno */
+  margin-top: 8px;           /* Espaço acima da caixa */
+  background: #f8f9fa;       /* Cor de fundo clara */
+  border: 1px solid #ddd;    /* Borda cinza clara */
+  border-radius: 4px;        /* Bordas arredondadas */
 }
 </style>
