@@ -1,0 +1,79 @@
+<!-- Botão que abre o modal ao ser clicado -->
+<button onclick="openModal()" class="open-modal">Abrir Modal</button>
+
+<!-- Estrutura do modal -->
+<div id="modal" class="modal">
+  
+  <!-- Conteúdo interno do modal -->
+  <div class="modal-content">
+    
+    <!-- Botão “fechar” (X) dentro do modal -->
+    <span class="close" onclick="closeModal()">&times;</span>
+    
+    <!-- Cabeçalho do modal -->
+    <h3>Título do Modal</h3>
+    
+    <!-- Corpo/conteúdo do modal -->
+    <p>Conteúdo dentro do modal.</p>
+  </div>
+</div>
+
+<script>
+/* ===== JavaScript ===== */
+
+/* Função que exibe o modal */
+function openModal() {
+  // Seleciona o elemento com id="modal" e altera seu display para 'flex'
+  document.getElementById('modal').style.display = 'flex';
+}
+
+/* Função que oculta o modal */
+function closeModal() {
+  // Seleciona o mesmo elemento e volta o display para 'none'
+  document.getElementById('modal').style.display = 'none';
+}
+</script>
+
+<style>
+/* ===== Estilo do botão que abre o modal ===== */
+.open-modal {
+  padding: 8px 12px;         /* Espaçamento interno */
+  background: #6f42c1;       /* Roxo Bootstrap “purple” */
+  color: #fff;               /* Texto branco */
+  border: none;              /* Remove borda padrão */
+  border-radius: 4px;        /* Bordas arredondadas */
+  cursor: pointer;           /* Cursor em formato de mãozinha */
+}
+
+/* ===== Estilo da camada de fundo do modal ===== */
+.modal {
+  display: none;             /* Oculto por padrão */
+  position: fixed;           /* Fixa o modal na viewport */
+  top: 0;
+  left: 0;
+  width: 100%;               /* Toma 100% da largura da viewport */
+  height: 100%;              /* Toma 100% da altura */
+  background: rgba(0,0,0,0.5); /* Fundo semi-transparente (efeito overlay) */
+  align-items: center;       /* Alinha conteúdo verticalmente ao centro (flex) */
+  justify-content: center;   /* Alinha conteúdo horizontalmente ao centro (flex) */
+}
+
+/* ===== Estilo da caixa de conteúdo do modal ===== */
+.modal-content {
+  background: #fff;          /* Fundo branco */
+  padding: 20px;             /* Espaçamento interno */
+  border-radius: 6px;        /* Cantos arredondados */
+  position: relative;        /* Necessário para posicionar o botão Fechar */
+  max-width: 400px;          /* Largura máxima */
+  width: 90%;                /* Largura responsiva */
+}
+
+/* ===== Estilo do botão “X” (fechar) ===== */
+.close {
+  position: absolute;        /* Posiciona em relação ao .modal-content */
+  top: 8px;                  /* Distância do topo */
+  right: 12px;               /* Distância da direita */
+  font-size: 1.5rem;         /* Tamanho da fonte maior para o ícone */
+  cursor: pointer;           /* Muda o cursor para indicar clique */
+}
+</style>
