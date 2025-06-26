@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Carrossel Simples</title>
+  <style>
+    /* Estilo do contêiner principal do carrossel */
+    .carousel {
+      position: relative;          /* Para posicionar os botões dentro dele */
+      width: 300px;                /* Largura fixa do carrossel */
+      overflow: hidden;            /* Esconde as partes que saem da área visível */
+      margin: 50px auto;           /* Centraliza na página */
+      border: 1px solid #ccc;      /* Borda leve */
+      border-radius: 8px;          /* Cantos arredondados */
+    }
+
+    /* Faixa que contém todos os slides lado a lado */
+    .track {
+      display: flex;               /* Coloca os slides em linha */
+      transition: transform 0.5s ease; /* Suaviza a movimentação ao trocar */
+    }
+
+    /* Cada slide ocupa 100% da largura do carrossel */
+    .item {
+      min-width: 100%;             /* Garante que cada slide ocupe o espaço todo */
+    }
+
+    /* Imagens dentro dos slides */
+    .item img {
+      width: 100%;                 /* Imagem ocupa toda a largura do slide */
+      display: block;              /* Remove espaço abaixo da imagem */
+    }
+
+    /* Botões de navegação esquerda/direita */
+    .prev, .next {
+      position: absolute;          /* Posicionados dentro do carrossel */
+      top: 50%;                    /* Centraliza verticalmente */
+      transform: translateY(-50%); /* Ajusta para o centro exato */
+      background: rgba(0, 0, 0, 0.5); /* Fundo escuro e semitransparente */
+      color: #fff;                 /* Texto branco (seta) */
+      border: none;                /* Remove borda */
+      padding: 6px 12px;           /* Espaçamento interno */
+      font-size: 20px;             /* Tamanho da seta */
+      cursor: pointer;             /* Cursor de clique */
+      border-radius: 4px;          /* Arredonda os botões */
+    }
+
+    /* Botão esquerdo */
+    .prev {
+      left: 8px;
+    }
+
+    /* Botão direito */
+    .next {
+      right: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Estrutura do carrossel -->
+  <div class="carousel">
+    <!-- Botão para voltar ao slide anterior -->
+    <button class="prev" onclick="moveSlide(-1)">‹</button>
+
+    <!-- Faixa que contém os slides -->
+    <div class="track">
+      <!-- Cada item é um slide com uma imagem -->
+      <div class="item"><img src="https://via.placeholder.com/300x150?text=Slide+1"></div>
+      <div class="item"><img src="https://via.placeholder.com/300x150?text=Slide+2"></div>
+      <div class="item"><img src="https://via.placeholder.com/300x150?text=Slide+3"></div>
+    </div>
+
+    <!-- Botão para avançar para o próximo slide -->
+    <button class="next" onclick="moveSlide(1)">›</button>
+  </div>
+
+  <script>
+    // Índice do slide atual (posição inicial)
+    let idx = 0;
+
+    // Função que move o carrossel para frente ou para trás
+    function moveSlide(dir) {
+      // Seleciona a faixa de slides
+      const track = document.querySelector('.carousel .track');
+
+      // Número total de slides
+      const total = track.children.length;
+
+      // Atualiza o índice com base na direção
+      // Usa o operador % para circular entre os slides (vai do último ao primeiro e vice-versa)
+      idx = (idx + dir + total) % total;
+
+      // Move a faixa horizontalmente com base no índice
+      track.style.transform = `translateX(-${idx * 100}%)`;
+    }
+  </script>
+
+</body>
+</html>
