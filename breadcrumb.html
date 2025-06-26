@@ -1,0 +1,39 @@
+<style>
+  /* Seleciona o container principal do breadcrumb */
+  .breadcrumb {
+    list-style: none; /* Remove os marcadores numéricos da lista */
+    padding: 0;       /* Remove o preenchimento interno da lista */
+    margin: 0;        /* Remove a margem externa da lista */
+  }
+
+  /* Seleciona cada item individual do breadcrumb */
+  .breadcrumb-item {
+    display: inline;   /* Faz os itens ficarem na mesma linha */
+    margin-right: 5px; /* Adiciona um pequeno espaço à direita de cada item */
+  }
+
+  /* Adiciona um separador antes de cada item, exceto o primeiro */
+  .breadcrumb-item + .breadcrumb-item::before {
+    content: "›";      /* Define o caractere '›' como o conteúdo do separador */
+    margin: 0 5px;     /* Adiciona espaçamento dos lados do separador */
+  }
+
+  /* Seleciona os links <a> dentro dos itens */
+  .breadcrumb-item a {
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    color: #007bff;        /* Define a cor do texto dos links como azul */
+  }
+
+  /* Seleciona apenas o item que está ativo (a página atual) */
+  .breadcrumb-item.active {
+    color: #6c757d; /* Define a cor do texto como cinza, indicando inatividade */
+  }
+</style>
+
+<nav aria-label="Breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item"><a href="#">Categoria</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Página Atual</li>
+  </ol>
+</nav>
